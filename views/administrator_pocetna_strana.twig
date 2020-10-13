@@ -1,0 +1,118 @@
+{% extends 'layout.twig' %}
+{% block title %} {{naslov}} {% endblock %}
+
+{% block stil %} 
+<link rel="stylesheet" href="src/Styles/administrator_pocetna_strana.css" type="text/css">
+
+{% endblock %}
+
+{% block link %}
+
+<a href="/administrator_logout" class="nav-item nav-link">{{odjava}}</a>
+            
+{% endblock %}
+
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid" id="naslov">
+    <h3>{{naslov}}</h3>
+</div>
+<div class="container" id="naslov_izvestaj">
+    <h3>{{izvestaj}}</h3>
+</div>
+<div class="container" id="kontejner_izvestaj">
+    <div class="row">
+        <div class="col align-middle">
+            <a href="/administrator/stampaj_sadrzaj_logera_info" style="text-decoration:none"><h5>{{loger_info}}</h5></a>
+        </div>
+        <div class="col align-middle">
+            <a href="/administrator/stampaj_sadrzaj_logera_warning" style="text-decoration:none"><h5>{{loger_warning}}</h5></a>
+        </div>
+        <div class="col align-middle">
+            <a href="/administrator/stampaj_sadrzaj_logera_error" style="text-decoration:none"><h5>{{loger_error}}</h5></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col align-middle">
+            <a href="/administrator/stampaj_fizicka_lica" style="text-decoration:none"><h5>{{lista_fizickih}}</h5></a>
+        </div>
+        <div class="col align-middle">
+            <a href="/administrator/stampaj_preduzeca" style="text-decoration:none"><h5>{{lista_preduzeca}}</h5></a>
+        </div>
+        <div class="col align-middle">
+            <a href="/administrator/stampaj_objave" style="text-decoration:none"><h5>{{lista_objava}}</h5></a>
+        </div>
+    </div>
+</div>
+<div class="container" id="kontejner">
+    <div class="row">
+        <div class="col sekcija align-middle">
+            <a href="/administrator/prikaz_preduzeca" style="text-decoration:none"><h5>{{prikaz_preduzeca}}</h5></a>
+        </div>
+        <div class="col sekcija align-middle">
+            <a href="/administrator/prikaz_fizickih_lica" style="text-decoration:none"><h5>{{prikaz_fizicka}}</h5></a>
+        </div>
+        <div class="col sekcija align-middle">
+            <a href="/administrator/prikaz_objava" style="text-decoration:none"><h5>{{prikaz_objava}}</h5></a>
+        </div>
+    </div>
+</div>
+<!-- prikaz za male uređaje -->
+<div class="container" id="prikaz_mali_uredjaji">
+    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="container">
+                 <a href="" style="text-decoration:none"><h5>{{loger_info}}</h5></a>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="container">
+                <a href="" style="text-decoration:none"><h5>{{loger_warning}}</h5></a>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="container">
+                <a href="" style="text-decoration:none"><h5>{{loger_error}}</h5></a>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="container">
+                <a href="/test" style="text-decoration:none"><h5>{{lista_fizickih}}</h5></a>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="container">
+                <a href="" style="text-decoration:none"><h5>{{lista_preduzeca}}</h5></a>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="container">
+                <a href="" style="text-decoration:none"><h5>{{lista_objava}}</h5></a>
+            </div>
+        </li>
+    </ul>
+    <div class="container">
+        <h3 class="h3">{{liste}}</h3>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="container">
+                    <a href="/administrator/prikaz_preduzeca" style="text-decoration:none"><h5>{{prikaz_preduzeca}}</h5></a>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="container">
+                    <a href="/administrator/prikaz_fizickih_lica" style="text-decoration:none"><h5>{{prikaz_fizicka}}</h5></a>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="container">
+                    <a href="/administrator/prikaz_objava" style="text-decoration:none"><h5>{{prikaz_objava}}</h5></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

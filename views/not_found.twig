@@ -1,0 +1,32 @@
+{% extends 'layout.twig' %}
+{% block title %} {{pretraga}} {% endblock %}
+
+
+{% block link %}
+
+{% if ulogovan is defined %}
+            <a href="/odjava" class="nav-item nav-link">{{odjava}}</a>
+
+{% else %}
+
+            <a href="/vrstaRegistracije" class="nav-item nav-link">{{registruj_se}}</a>
+            <a href="/vrstaLogovanja" class="nav-item nav-link">{{ulogujte_se}}</a>
+{% endif %}
+
+{% endblock %}
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+{% block content %}
+
+<div class="container" style="text-align:center;margin-top:10%;">
+        <div class="alert alert-dark">
+            <h3>{{msg}}</h3>
+            <a href="/"><button type="button" class="btn btn-secondary">{{pocetna}}</button></a>
+        </div>
+    </div> 
+    
+{% endblock %}
+
+
+
+

@@ -1,0 +1,43 @@
+{% extends 'layout.twig '%}
+
+{% block title %} {{naslov}} {% endblock %}
+
+{% block stil %} <link rel="stylesheet" href="/src/Styles/vrstaRegistracije.css" type="text/css"> {% endblock %}
+
+{% block link %}
+
+<a href="/vrstaRegistracije" class="nav-item nav-link">{{registruj_se}}</a>
+<a href="/vrstaLogovanja" class="nav-item nav-link">{{ulogujte_se}}</a>
+
+{% endblock %}
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+{% block content %}
+
+    <div class="container" id="sadrzaj">
+        
+        <i><h3 id="nas3">{{registracija}}</h3></i>
+        
+        <div class="row">
+            <div class="col fizicko">
+                <h4 id="naslovFizicko"><a href="/registracija">{{fizicko}}</a></h4>
+            </div>
+            <div class="col pravno">
+                <h4 id="naslovPravno"><a href="/registracijaPravno">{{ pravno }}</a></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="resize">
+        <i><h3 id="nas3">{{registracija}}</h3></i>
+
+        <div class="container fizicko" id="fizickoResize">
+            <h4 id="naslovfizickoResize"><a href="/registracija">{{fizicko}}</a></h4>
+        </div>
+        <div class="container pravno" id="donjaSekcija">
+            <h4 id="naslovPravnoResize"><a href="/registracijaPravno">{{pravno}}</a></h4>
+        </div>
+
+    </div>
+
+ {% endblock %}

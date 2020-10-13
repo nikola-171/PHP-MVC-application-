@@ -1,0 +1,73 @@
+{% extends 'layout.twig' %}
+{% block title %}
+    Login
+{% endblock %}
+{% block link %}
+
+
+<a href="/vrstaRegistracije" class="nav-item nav-link">{{registruj_se}}</a>
+<a href="/vrstaLogovanja" class="nav-item nav-link">{{ulogujte_se}}</a>
+
+{% endblock %}
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+
+{% block content %}
+
+{% if error is defined %}
+    <div class="container" style="text-align:center;">
+        <div class="alert alert-info">
+            <h2>{{error}}</h2>
+        </div>
+    </div>
+{% else %}
+<div class="container" style="text-align:center;max-width:300px;margin-top:5vh;">
+    <h3>{{promena_lozinke}}</h3>
+    <form action="" id="reset">
+        <label>{{lozinka_unos}}</label>
+        <div class="form-group">
+            <input type="password" class="form-control" name="lozinka" id="lozinka">
+        </div>
+        <label>{{lozinka_unos_ponovo}}:</label>
+        <div class="form-group">
+            <input type="password" class="form-control" name="lozinka_ponovo" id="lozinka_ponovo">
+        </div>
+        <div class="form-group">
+            <button type="button" id="promeni" class="btn btn-primary">{{prosledi}}</button>
+        </div>
+    </form>
+    <p id="load"></p>
+</div>
+<script type="text/javascript">
+let greska = '{{ne_poklapanje}}';
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#reset").submit(function(e){
+            return false;
+        });
+        $("#promeni").click(function(){
+            let lozinka = $("#lozinka").val();
+            let lozinka_ponovo = $("#lozinka_ponovo").val();
+
+            if(lozinka !== lozinka_ponovo){
+                $("#load").text(greska);
+            }else{
+                $.ajax({
+                    url: '/promenaLozinkeFizicko',
+                    type: 'post',
+                    data: {lozinka : lozinka},
+                    success: function(response){
+                        $("#load").html(response);
+                    },
+                    beforeSend: function() {
+                        $("#load").text("loading....");
+                    }
+                });
+            }
+        });
+    });
+</script>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'layout.twig' %}
+{% block title %} {{pretraga}} {% endblock %}
+
+{% block stil %} <link rel="stylesheet" href="src/Styles/pretrazivanje.css" type="text/css">
+                 
+{% endblock %}
+
+{% block link %}
+
+{% if ulogovan is defined %}
+            <a href="/odjava" class="nav-item nav-link">{{odjava}}</a>
+
+{% else %}
+            {% if admin is defined %}
+                <a href="/administrator_logout" class="nav-item nav-link">{{odjava}}</a>
+            {% else %}
+                <a href="/vrstaRegistracije" class="nav-item nav-link">{{registruj_se}}</a>
+                <a href="/vrstaLogovanja" class="nav-item nav-link">{{ulogujte_se}}</a>
+            {% endif %}
+{% endif %}
+
+{% endblock %}
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid" id="kontejner">
+    <h3>{{pretraga_sajta}}</h3>
+</div>
+<div class="container" style="text-align:center;">
+    {% if nedozvoljeno is defined %}
+        <div class="alert alert-danger">
+            <h3>{{nedozvoljeno}}</h3>
+        </div>
+    {% else %}
+        {% if prazno is defined %}
+            <div class="alert alert-info">
+                <h3>{{prazno}}</h3>
+            </div>
+        {% else %}
+            <table class="table table-striped" id="tabela">
+                <thead>
+                 <tr>
+                     <th>Strana</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for item in rezultat %}
+                    <tr>
+                        <td><a href="{{item['link']}}">{{item['naslov']}}</a></td>
+                    </tr>
+                    {% endfor %}
+        {% endif %}
+        </tbody>
+    </table>
+    {% endif %}
+    
+</div>
+
+    
+{% endblock %}

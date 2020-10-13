@@ -1,0 +1,582 @@
+{
+    "opste" : {
+        "srp": {
+            "odjava" : "Odjava",
+            "registruj_se" : "Registracija",
+            "ulogujte_se" : "Logovanje",
+            "pretraga" : "pretraga",
+            "placeholder" : "pretražite sajt",
+            "prosledi" : "prosledi",
+            "postavi" : "postavi",
+            "obavezno" : "ovo polje je obavezno",
+            "validna_email_adresa" : "unesite validnu email adresu",
+            "nazad" : "nazad",
+            "prikaz" : "prikaz",
+            "prazna" : "prazna polja nisu dozvoljena"
+        },
+        "eng" : {
+            "odjava" : "Logout",
+            "registruj_se" : "Register",
+            "ulogujte_se" : "Login",
+            "pretraga" : "search",
+            "placeholder" : "search the web app",
+            "prosledi" : "submit",
+            "postavi" : "post",
+            "obavezno" : "this field is required",
+            "validna_email_adresa" : "enter a valid email address",
+            "nazad" : "back",
+            "prikaz" : "show",
+            "prazna" : "empty fields are not valid"
+        }
+    },
+    "welcome" : {
+        "srp": {
+            "odjava" : "Odjavite se",
+            "pocetna" : "Početna strana",
+            "naslov" : "UDRUŽENJE DRUŠTVENO ODGOVORNIH PREDUZEĆA",
+            "sadrzaj" : "Ovde če stajati neki sadtžaj koji ćemo kasnije sastaviti!",
+            "registruj_se" : "Registacija",
+            "ulogujte_se" : "Logovanje",
+            "jezik" : "jezik",
+            "promeni" : "promeni",
+            "preduzeca" : "Članovi udruženja društveno odgovornih preduzeća " ,
+            "najava" : "Najava društveno odgovorne aktivnosti preduzeća",
+            "info" : "Informacije",
+            "stranica" : "o temi DO",
+            "naslovStrana" : "Dobrodošli",
+            "pretraga" : "pretraga",
+            "placeholder" : "pretražite sajt",
+            "citat" : "Odgovornost hoda korak uz korak sa sposobnošću i moći.",
+            "autor" : " Josiah Gilbert Holland",
+            "uloguj" : "Log in da biste pristupili sajtu",
+            "logovanje_admin" : "Logovanje administratora aplikacije",
+            "admin_pocetna" : "Početna strana administratora aplikacije",
+            "logovanje" : "Logovanjem na sajt:",
+            "info_stavka_1" : "šta je DO",
+            "info_stavka_2" : "njen cilj",
+            "info_stavka_3" : "primer",
+            "sta" : "šta je DO",
+            "cilj" : "njen cilj",
+            "primer" : "primer DO",
+            "stavka_1" : "Pristupanjem dobijate informacije o društveno odgovornim aktivnostima kompanija",
+            "stavka_2" : "Dobijate mogućnost učestvovanja u raznim društveno odgovornim aktivnostima"
+        },
+        "eng" : {
+            "naslov" : "ASSOCIATION OF SOCIALLY RESPONSIBLE COMPANIES",
+            "sadrzaj" : "Here will stand something!",
+            "odjava" : "Logout",
+            "pocetna" : "Home page",
+            "registruj_se" : "Register",
+            "ulogujte_se" : "Login",
+            "jezik" : "language",
+            "promeni" : "change",
+            "preduzeca" : "Members of associations of socially responsible companies",
+            "najava" : "Announcement of socially responsible activities of the company",
+            "info" : "Info",
+            "stranica" : "about SR",
+            "naslovStrana" : "Welcome",
+            "pretraga" : "search",
+            "placeholder" : "search the web app",
+            "citat" : "Responsibility walks step by step with ability and power.",
+            "autor" : "Josiah Gilbert Holland",
+            "uloguj" : "Log in to enter the web site",
+            "logovanje_admin" : "Application administrator login",
+            "admin_pocetna" : "Home page for the aplication administrator",
+            "logovanje" : "When you log in:",
+            "info_stavka_1" : "šta je DO",
+            "info_stavka_2" : "njen cilj",
+            "sta" : "what is SR",
+            "cilj" : "their goals",
+            "primer" : "example",
+            "info_stavka_3" : "primer",
+            "stavka_1" : "You access information about socially responsible activities of companies",
+            "stavka_2" : "You get the opportunity to participate in various socially responsible activities"
+
+
+        }
+        
+    },
+
+    "page_not_found": {
+        "srp": {
+            "pocetna" : "početna strana",
+            "error_message" : "Strana koju tražite ne postoji! Posetite početnu stranicu, ili možete pretražiti sajt na osnovu ključne reči ili rečenice"
+
+        },
+        "eng" :{
+            "pocetna" : "home page",
+
+            "error_message" : "The page you are looking for does not exist! Visit the homepage, or you can search the site based on a keyword or sentence"
+
+        }
+    },
+    "register" : {
+        "srp": {
+            "naslov" : "Možete besplatno da se registrujete",
+            "ime" : "Ime:",
+            "ime_unos" : "Ime...",
+            "prezime" : "Prezime:",
+            "prezime_unos" : "Prezime...",
+            "korisnicko_ime" : "Korisničko ime:",
+            "korisnicko_ime_unos" : "Korisničko ime...",
+            "lozinka" : "Lozinka:",
+            "lozinka_unos" : "Lozinka...",
+            "email" : "Email:",
+            "email_unos" : "Email...",
+            "dan" : "Dan:",
+            "mesec" : "Mesec:",
+            "godina" : "Godina:",
+            "godina_unos" : "Godina",
+            "uspesno" : "Uspešno ste ste registrovali",
+            "duplikat" : "Korisničko ime već postoji, molimo unesite drugo.",
+            "greska" : "Greška prilikom registrovanja, pokušajte ponovo kasnije."
+        },
+        "eng" : {
+            "naslov" : "You can register for free",
+            "ime" : "Name:",
+            "ime_unos" : "name...",
+            "prezime" : "Surname:",
+            "prezime_unos" : "surname...",
+            "korisnicko_ime" : "User name:",
+            "korisnicko_ime_unos" : "user name...",
+            "lozinka" : "Password:",
+            "lozinka_unos" : "password...",
+            "email" : "Email:",
+            "email_unos" : "email...",
+            "dan" : "Day:",
+            "mesec" : "Month:",
+            "godina" : "Year:",
+            "godina_unos" : "year",
+            "uspesno" : "You have successfully registered",
+            "duplikat" : "Username already exists, please enter another",
+            "greska" : "An error has occured while registering, please try again later"
+
+        }
+    },
+
+    "registerPravno" : {
+        "srp" : {
+            "naslov" : "Možete besplatno da se registrujete!",
+            "naziv" : "Naziv preduzeća:",
+            "naziv_unos" : "Naziv...",
+            "maticni" : "Matični broj:",
+            "maticni_unos" : "Matični broj preduzeća...",
+            "lozinka" : "Lozinka",
+            "lozinka_unos" : "Lozinka...",
+            "sifra_drustva" : "Šifra privrednog društva:",
+            "sifra_drustva_unos" : "Šifra privrednog društva...",
+            "email" : "Email:",
+            "email_unos" : "Email...",
+            "duplikat" : "Matični broj već postoji u bazi"
+        },
+        "eng" : {
+            "naslov" : "You can register for free",
+            "naziv" : "Name of company",
+            "naziv_unos" : "Name...",
+            "maticni" : "Registration number:",
+            "maticni_unos" : "Company registration number...",
+            "lozinka" : "Password",
+            "lozinka_unos" : "Password...",
+            "sifra_drustva" : "Company code:",
+            "sifra_drustva_unos" : "Company code...",
+            "email" : "Email:",
+            "email_unos" : "Email...",
+            "duplikat" : "A company with that ID is already registered"
+
+
+        }
+    },
+
+    "login" : {
+        "srp" : {        
+            "naslov" : "Ulogujte se kao fizičko lice.",
+            "korisnicko_ime" : "Korisničko ime:",
+            "korisnicko_ime_unos" : "Korisničko ime...",
+            "lozinka" : "Lozinka:",
+            "lozinka_unos" : "Lozinka...",
+            "zapamti_me" : "Zapamti me",
+            "zaboravili" : "Zaboravili ste korisničko ime ili lozinku"
+        },
+        "eng" : {
+            "naslov" : "Login as individual",
+            "korisnicko_ime" : "Username:",
+            "korisnicko_ime_unos" : "Username...",
+            "lozinka" : "Password:",
+            "lozinka_unos" : "Password...",
+            "zapamti_me" : "Remember me",          
+            "zaboravili" : "You forgot your username or password"
+
+        }
+    },
+    "login_pravno" : {
+        "srp" : {
+            "naslov" : "Ulogujte se kao pravno lice",
+            "korisnicko_ime" : "Matični broj:",
+            "korisnicko_ime_unos" : "Matični broj...",
+            "lozinka" : "Lozinka:",
+            "lozinka_unos" : "Lozinka...",
+            "zapamti_me" : "Zapamti me",
+            "zaboravili" : "Zaboravili ste lozinku"
+
+        },
+        "eng" : {
+            "naslov" : "Login as a legal entity",
+            "korisnicko_ime" : "Company registration number:",
+            "korisnicko_ime_unos" : "Company registration number...",
+            "lozinka" : "Password:",
+            "lozinka_unos" : "Password...",
+            "zapamti_me" : "Remember me",
+            "zaboravili" : "You forgot your password"
+        }
+    },
+    "vrstaRegistracije" :{
+        "srp" : {
+            "registracija":"Registrujte se kao:",
+            "fizickoLice" : "Fizičko lice",
+            "pravnoLice" : "Pravno lice",
+            "naslov" : "Vrsta registracije"
+            
+        },
+        "eng":{
+            "registracija":"Register as:",
+            "fizickoLice" : "Individual",
+            "pravnoLice" : "Legal entity",
+            "naslov" : "Register as"
+        }
+        
+    },
+
+    "vrstaLogovanja" : {    
+        "srp" : {
+            "logovanje":"Ulogujte se kao:",
+            "fizickoLice" : "Fizičko lice  ", 
+            "pravnoLice" : "Pravno lice",
+            "naslov" : "Vrsta logovanja"
+          
+        },
+        "eng" : {
+            "logovanje":"Login as:",
+            "fizickoLice" : "Individual", 
+            "pravnoLice" : "Legal entity",
+            "naslov" : "Login as"
+
+            
+
+        }   
+        
+    },
+
+    "pocetna_strana" : {
+        "srp": {
+            "filter_naslov_sekcije" : "Filtrirajte pretragu objava:",
+            "filter_datum" : "Po datumu:",
+            "filter_datum_pre" : "Objave pre označenog datuma (uključujući uneti datum)",
+            "filter_datum_posle" : "Objave posle označenog datuma (uključujući uneti datum)",
+            "filter_naziv" : "Po nazivu preduzeća:",
+            "filter_naslov": "Po naslovu objave:",
+            "filter_sadrzi" : "Reč/fraza u objavi",
+            "dogadjaj_naslov_sekcije" : "Napravite događaj",
+            "dogadjaj_naslov" : "Unesite naslov događaja...",
+            "dogadjaj_tekst" : "Unesite tekst događaja...",
+            "dogadjaj_datum" : "Unesite datum održavanja događaja:",
+            "dogadjaj_slika": "Ubacite sliku",
+            "citat" : "Odgovornost hoda korak uz korak sa sposobnošću i moći.",
+            "citat_autor" : "Josiah Gilbert Holland",
+            "objava_obrisi" : "Obrišite objavu",
+            "ucitaj"  : "Učitaj još objave",
+            "pocetna_strana" : "Početna strana",
+            "nema" : "Nema više objava za prikaz"
+        },
+        "eng"  : {
+            "filter_naslov_sekcije" : "Filter search posts:",
+            "filter_datum" : "By date:",
+            "filter_datum_pre" : "Announcements before the specified date (entered date included)",
+            "filter_datum_posle" : "Announcements after the specified date (entered date included)",
+            "filter_naziv" : "By company name:",
+            "filter_naslov": "By the title of the post:",
+            "filter_sadrzi" : "Word / phrase in the post",
+            "dogadjaj_naslov_sekcije" : "Make an event",
+            "dogadjaj_naslov" : "Enter the title of the event...",
+            "dogadjaj_tekst" : "Enter the content of the event...",
+            "dogadjaj_datum" : "Enter the date of the event:",
+            "dogadjaj_slika": "Insert a picture",
+            "citat" : "Responsibility walks step by step with ability and power.",
+            "citat_autor" : "Josiah Gilbert Holland",
+            "objava_obrisi" : "Delete event",           
+            "ucitaj"  : "Load more events",
+            "pocetna_strana" : "Home page",
+            "nema" : "There are no more posts to show"
+
+
+
+        }
+    },
+
+    "logovanjeProvera" : {
+        "srp" : {
+            "nije_pronadjen" : "Korisnik nije pronađen",
+            "pogresni_podaci" : "Korisničko ime ili lozinka nisu ispravni"
+        },
+        "eng" : {
+            "nije_pronadjen" : "User not found",
+            "pogresni_podaci" : "Username or password are not valid"
+        }
+    },
+    "zaboravljena_lozinka" : {
+        "srp" : {
+            "korisnicko_ime" : "Unesite korisničko ime",
+            "resetovanje" : "Resetovanje lozinke",
+            "ne_validna_sesija" : "Sesija nije validna",
+            "istekla" : "Istekla Vam je sesija",
+            "uspesno" : "Uspešno ste promenili lozinku",
+            "istekla_ili_promena" : "Istekla Vam je sesija ili ste uspešno promenili lozinku",
+            "ne_postoji" : "Korisnik ne postoji u bazi"
+        },
+        "eng" : {
+            "korisnicko_ime" : "Enter username",
+            "resetovanje" : "Password reset",
+            "ne_validna_sesija" : "Session is not valid",
+            "istekla" : "Your session has timed out",
+            "uspesno" : "You have successfully changed your password",
+            "istekla_ili_promena" : "Your session has timed out or you have successfully changed your password",
+            "ne_postoji" : "User does not exist"
+
+
+        }
+        
+    },
+    "zaboravljenja_lozinka_preduzece" :  {
+        "srp": {
+            "maticni_unos" : "Unesite matični broj preduzeća",
+            "posalji" : "prosledi",
+            "promena_lozinke" : "Reset lozinke",
+            "lozinka_unos" : "Unesite novu lozinku",
+            "lozinka_unos_ponovo" : "Ponovo unesite novu lozinku",
+            "preduzece_ne_postoji" : "Preduzeće sa matičnim brojem ne postoji u bazi.",
+            "poslata_email_poruka" : "Poslata Vam je email poruka sa sadržajem za resetovanje lozinke",
+            "ne_poklapanje" : "Lozinke se ne poklapaju"
+        },
+        "eng": {
+            "maticni_unos" : "Enter company ID number",
+            "posalji" : "submit",
+            "promena_lozinke" : "Password reset",
+            "lozinka_unos" : "Enter new password",
+            "lozinka_unos_ponovo" : "Confirm password",
+            "preduzece_ne_postoji" : "A company with that ID does not exist in out database",
+            "poslata_email_poruka" : "An email has been sent to you with a link to reset yout password",
+            "ne_poklapanje" : "Passwords do not match"
+        }
+    },
+    "info" : {
+        "srp" : {
+            "naslov" : "Društvena odgovornost",
+            "par_1" : "Društveno odgovorno poslovanje (CSR – corporate social responsibility) je koncept koji je sastavni deo novog, održivog ekonomskog modela koji podrazumeva svest o novom položaju i značaju poslovnog sektora u savremenom, globalnom društvu, i o odgovornosti koja iz njih proizilazi.",
+            "par_2" : "Istraživanja pokazuju da kompanije sa razvijenim CSR praksama ostvaruju veće učinke i prihvaćeno je (na svetskom nivou) da je društvena odgovornost kompatibilna sa konkurentnošću kompanije.",
+            "par_3" : "Većina angažovanja kompanija u ovom domenu bila je na dobrovoljnoj bazi, dok su države širom sveta preduzećima ostavljale slobodu izbora o načinu i intenzitetu angažovanja i posvećenosti na ovom polju.",
+            "par_4" : "Poslovanje svake kompanije se odvija u lokalnoj ili široj društvenoj zajednici. Iskustva drugih zemalja nam pokazuju da, ukoliko je država primer kompanijama i sama posluje društveno odgovorno kroz svoje institucije i sisteme i pruža podsticaj za razvoj ovih praksi (postavljanjem ove teme visoko na političkoj agendi), tada će i kompanije uložiti resurse i prilagoditi svoje poslovanje potrebama društva i održivog razvoja.",
+            "par_5" : "Kako bi dalje podstakli kompanije da posluju odgovorno, neophodno je da predstavnici države prepoznaju značaj ove inicijative i podrže dalju implementaciju CSR koncepta. Kada zvanični organi države prepoznaju i stanu iza ove inicijative to će podstaći i druga preduzeća da u pozitivnom takmičenju dostignu svoju konkurenciju u ovom domenu, poboljšavajući sveukupnu klimu poslovanja u zemlji i stvore pozitivno i zdravo radno okruženje, smanje negativne uticaje na životnu sredinu, daju inovativnu i održivu podršku lokalnoj zajednici, ali i kreiraju fer okruženje na tržištu i doprinesu održivom razvoju, neophodnom za 21. vek."
+        },
+        "eng" : {
+            "naslov" : "Social Responsibility",
+            "par_1" : "Corporate social responsibility (CSR) is a concept that is an integral part of a new, sustainable economic model that implies awareness of the new position and importance of the business sector in modern, global society, and the responsibility that arises from them.",
+            "par_2" : "Research shows that companies with developed CSR practices achieve greater effects and it is accepted (globally) that social responsibility is compatible with the company's competitiveness.",
+            "par_3" : "Most of the engagement of companies in this domain was on a voluntary basis, while countries around the world left companies free to choose the manner and intensity of engagement and commitment in this field.",
+            "par_4" : "The business of each company takes place in the local or wider community. Experiences from other countries show us that if the state is an example to companies and operates socially responsibly through its institutions and systems and provides incentives for the development of these practices (by placing this topic high on the political agenda), then companies will invest resources and adjust their business. needs of society and sustainable development.",
+            "par_5" : "In order to further encourage companies to operate responsibly, it is essential that government representatives recognize the importance of this initiative and support the further implementation of the CSR concept. When state authorities recognize and stand behind this initiative, it will encourage other companies to compete in this field in positive competition, improving the overall business climate in the country and creating a positive and healthy working environment, reduce negative environmental impacts, provide innovative and sustainable support to the local community, but also create a fair market environment and contribute to sustainable development, necessary for the 21st century."
+        }
+    },
+    
+    "administrator" : {
+        "srp" : {
+            "logovanje" : "Logovanje administratora aplikacije",
+            "admin_ime" : "Administrator ime",
+            "admin_lozinka" : "Administrator lozinka",
+            "nema_admina" : "Ako aplikacija nema administratora onda se ovde može registrovati.",
+            "neispravno" : "Administrator ime ili lozinka nisu ispravni",
+            "nema" : "Administrator ne postoji u bazi",
+            "prazna_polja" : "Prazna polja nisu dozovljena",
+            "ne_poklapanje" : "Lozinke se ne poklapaju",
+            "naslov" : "Administrator logovanje",
+            "naslov_prikaz_fizicka" : "Prikaz fizičkih lica",
+            "naslov_prikaz_preduzeca" : "Prikaz preduzeća",
+            "naslov_prikaz_objava" : "Prikaz objava"
+
+
+        },
+        "eng" : {
+            "logovanje" : "Application administrator loggin",
+            "admin_ime" : "Administrator name",
+            "admin_lozinka" : "Administrator password",
+            "nema_admina" : "If the application does not have an administrator then it can be registered here",
+            "neispravno" : "Administrator name or password are not valid",
+            "nema" : "An administrator does not exists",
+            "prazna_polja" : "Empty field are not alowed",
+            "ne_poklapanje" : "Passwords do not match",
+            "naslov" : "Administrator login",
+            "naslov_prikaz_fizicka" : "Show individuals",
+            "naslov_prikaz_preduzeca" : "Show companies",
+            "naslov_prikaz_objava" : "Show posts"
+        }
+    },
+    "administraor_pocetna" : {
+        "srp" : {
+            "naslov" : "Početna strana administratora aplikacije",
+            "izvestaj" : "Generišite izveštaj",
+            "loger_info" : "Prikaz sadržaja logger info",
+            "loger_warning" : "prikaz sadržaja logger warning",
+            "loger_error" : "Prikaz sadržaja loger error",
+            "lista_fizickih" : "Lista fizičkih lica",
+            "lista_preduzeca" : "Lista pravnih lica",
+            "lista_objava" : "Lista objava",
+            "prikaz_fizicka" : "Prikaz fizičkih lica",
+            "prikaz_preduzeca" : "Prikaz preduzeća",
+            "prikaz_objava" : "Prikaz objava",
+            "liste" : "Prikaz liste:"
+
+        },
+        "eng" : {
+            "naslov" : "Administrator main page",
+            "izvestaj" : "Generate report",
+            "loger_info" : "Get logger info content ",
+            "loger_warning" : "Get logger warning content",
+            "loger_error" : "Get logger error content",
+            "lista_fizickih" : "List of individuals",
+            "lista_preduzeca" : "List of legal entities",
+            "lista_objava" : "List of posts",
+            "prikaz_fizicka" : "Show individuals",
+            "prikaz_preduzeca" : "Show legal entities",
+            "prikaz_objava" : "Show posts",
+            "liste" : "Show lists:"
+
+        }
+    },
+    "registracija_administratora" : {
+        "srp": {
+            "registracija" : "Registracija administratora aplikacije",
+            "ime" : "Ime",
+            "prezime" : "Prezime",
+            "email" : "Email",
+            "admin_ime" : "Administrator ime",
+            "lozinka" : "Lozinka",
+            "lozinka_potvrda" : "Potvrda lozinke",
+            "vec_postoji" : "Administrator već postoji",
+            "uspesno" : "Uspešno ste registrovali administratora",
+            "greska"  :"došlo je do greške prilikom registrovanje administratora",
+            "naslov" : "Registracija administratora"
+        },
+        "eng" : {
+            "registracija" : "Application administrator registration",
+            "ime" : "First name",
+            "prezime" : "Last name",
+            "email" : "Email",
+            "admin_ime" : "Administrator name",
+            "lozinka" : "Password",
+            "lozinka_potvrda" : "Confirm password",
+            "vec_postoji" : "An administrator already exists",
+            "uspesno" : "You have successfully registered an administrator",
+            "greska"  :"An error occured while registering the administrator",
+            "naslov" : "Administrator registration"
+        }
+    },
+    "administrator_prikaz_preduzeca" : {
+        "srp" : {
+            "id" : "id",
+            "naziv" : "naziv",
+            "maticni" : "matični broj",
+            "sifra_drustva" : "šifra privrednog društva",
+            "email" : "email",
+            "obrisi" : "obriši",
+            "greska" : "Došlo je do greške prilikom brisanja preduzeća iz baze"
+        },
+        "eng" : {
+            "id" : "id",
+            "naziv" : "name",
+            "maticni" : "company number",
+            "sifra_drustva" : "company code",
+            "email" : "email",
+            "obrisi" : "delete",
+            "greska" : "An error occured while removing the company from the database"
+
+
+        }
+    },
+    "administrator_prikaz_fizickih_lica" : {
+        "srp" : {
+            "id" : "id",
+            "ime" : "ime",
+            "prezime" : "prezime",
+            "email" : "email",
+            "datum_rodjenja" : "datum rođenja",
+            "korisnicko_ime" : "korisničko ime",
+            "greska" : "Došlo je do greške prilikom brisanja korisnika iz baze"
+        },
+        "eng" : {
+            "id" : "id",
+            "ime" : "firstname",
+            "prezime" : "lastname",
+            "email" : "email",
+            "datum_rodjenja" : "date of birth",
+            "korisnicko_ime" : "username",
+            "greska" : "An error occured while removing the user from the database"
+
+        }
+    },
+    "administrator_prikaz_objava" : {
+        "srp" : {
+            "id" : "id",
+            "datum_odrzavanja" : "datum odrzavanja",
+            "naslov" : "naslov",
+            "naziv_preduzeca" : "naziv preduzeća",
+            "akcija" : "akcija",
+            "prikaz" : "prikaz",
+            "greska" : "Došlo je do greške prilikom brisanja objave iz baze",
+            "datum_postavljanja" : "datum postavljanja"
+        },
+        "eng" : {
+            "id" : "id",
+            "datum_odrzavanja" : "date of the event",
+            "naslov" : "title",
+            "naziv_preduzeca" : "company name",
+            "akcija" : "action",
+            "prikaz" : "show",
+            "greska" : "An error occured while removing the post from the database",
+            "datum_postavljanja" : "date posted"
+
+
+        }
+    },
+    "pretraga" : {
+        "srp" : {
+            "pocetna_strana" : "Početna strana",
+            "registracija" : "Registracija",
+            "logovanje" : "Logovanje",
+            "info" : "Informacije",
+            "administrator" : "Administrator aplikacije",
+            "nedozvoljeno" : "Upit ne sme biti prazan i mora sadržati najmanje 4 karaktera.",
+            "prazno" : "Nismo uspeli da pronađemo podudaranje",
+            "pretraga_sajta" : "Rezultati pretrage:"
+        },
+        "eng" : {
+            "pocetna_strana" : "Home page",
+            "registracija" : "Register",
+            "logovanje" : "Login",
+            "info" : "Information",
+            "administrator" : "Aplication administrator",
+            "nedozvoljeno" : "The search query must not be empty and must contain at least 4 characters.",
+            "prazno" : "We could not find a match",
+            "pretraga_sajta" : "Search matches:"
+
+
+
+        }
+    },
+    "prikaz_objave" : {
+        "srp" : {
+            "ne_postoji" : "Objava ne postoji."
+        },
+        "eng" : {
+            "ne_postoji" : "The posts does not exists."
+
+        }
+    }
+}

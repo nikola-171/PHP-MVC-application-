@@ -1,0 +1,38 @@
+{% extends 'layout.twig'%}
+
+{% block title %}info{% endblock %}
+{% block stil %} <link rel="stylesheet" href="/src/Styles/info.css" type="text/css">
+                 
+{% endblock %}
+{% block link %}
+
+{% if ulogovan is defined %}
+            <a href="/odjava" class="nav-item nav-link">{{odjava}}</a>
+
+{% else %}
+
+        {% if admin is defined %}
+                    <a href="/administrator_logout" class="nav-item nav-link">{{odjava}}</a>
+
+        {% else %}
+                    <a href="/vrstaRegistracije" class="nav-item nav-link">{{registruj_se}}</a>
+                    <a href="/vrstaLogovanja" class="nav-item nav-link">{{ulogujte_se}}</a>
+        {% endif %}
+
+{% endif %}
+
+{% endblock %}
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+{% block content %}
+<div class="jumbotron" id="naslov">
+     <h2>{{naslov}}</h2>
+</div>
+<div class="container">
+   <p>{{par_1}}</p>
+   <p>{{par_2}}</p>
+   <p>{{par_3}}</p>
+   <p>{{par_4}}</p>
+   <p>{{par_5}}</p>
+</div>
+{% endblock %}

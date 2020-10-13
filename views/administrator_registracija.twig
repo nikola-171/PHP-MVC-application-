@@ -1,0 +1,63 @@
+{% extends 'layout.twig' %}
+{% block title %} {{naslov}} {% endblock %}
+
+{% block stil %} 
+
+<link rel="stylesheet" href="src/Styles/administrator_logovanje.css" type="text/css">
+                 
+{% endblock %}
+
+{% block link %}
+<a href="/administrator_logovanje" class="nav-item nav-link">{{nazad}}</a>
+{% endblock %}
+
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+
+{% block content %}
+<div class="container" id="glavna_strana">
+    <div class="jumbotron">
+        <h4>{{registracija}}</h4>
+        <div class="container" id="forma">
+            <form action="" id="forma_sadrzaj">
+                <div class="form-group">
+                    <label for="ime">{{ime}}</label>
+                    <input type="text" id="ime" name="ime" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="prezime">{{prezime}}</label>
+                    <input type="text" id="prezime" name="prezime" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">{{email}}</label>
+                    <input type="text" id="email" name="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="administrator_ime">{{admin_ime}}</label>
+                    <input type="text" id="administrator_ime" name="administrator_ime" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="administrator_lozinka"> {{lozinka}}</label>
+                    <input type="password" id="administrator_lozinka" name="administrator_lozinka" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="administrator_lozinka_2">{{lozinka_potvrda}}</label>
+                    <input type="password" id="potvrda_lozinke" name="administrator_lozinka_2" class="form-control">
+                </div>
+               
+                <button type="submit" id="prosledi" class="btn btn-primary">{{prosledi}}</button>
+              
+            </form>
+            <div id="load_container" class="container">
+                <p id="load"></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+let prazna_polja = '{{prazna_polja}}';
+let ne_poklapanje = '{{ne_poklapanje}}';
+</script>
+<script src="/../src/javascript/administrator_registracija.js" type="text/javascript"></script>
+{% endblock %}

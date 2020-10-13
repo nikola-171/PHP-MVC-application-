@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "drustvena_odgovornost",
+            "driver": "MySQL",
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "name": "MySql",
+            "port": 3306,
+            "previewLimit": 50,
+            "server": "localhost",
+            "username": "root",
+            "password": ""
+        }
+    ]
+}

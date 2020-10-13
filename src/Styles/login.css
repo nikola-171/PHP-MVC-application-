@@ -1,0 +1,27 @@
+#logovanje_forma {
+  text-align: center;
+  margin-top: 10vh;
+  width: 380px;
+  display: none;
+  margin-top:10vh;
+  border:1px solid rgba(160, 133, 133, 0.692);
+  padding: 15px;
+  border-radius: 3%;
+
+}
+
+
+
+.centered {
+  text-align: center;
+  opacity: 1;
+}
+
+#logovanje_forma a {
+  text-decoration: none;
+}
+
+#forma {
+  padding-top: 3%;
+}
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,44 @@
+{% extends 'layout.twig' %}
+{% block title %} {{naslov}} {% endblock %}
+
+{% block stil %} <!-- OVDE ĆE IĆI STIL-->
+
+<link rel="stylesheet" href="/src/Styles/prikaz_objave.css" type="text/css">
+                 
+{% endblock %}
+{% block link %}
+<a href="/logovanje" class="nav-item nav-link">{{nazad}}</a>
+
+{% endblock %}
+
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+
+{% block content %}
+<div class="container" id="prikaz">
+    {% if error is defined %}
+        <div class="alert alert-info">
+            <h2>{{error}}</h2>        
+        </div>
+    {% else %}
+    <hr>
+    <h5>{{naslov}} - {{datum_postavljanja}}</h5>
+    
+    {% if putanja_slike != null %}
+        {% if orijentacija == "s" %}
+                <div class="container">
+                    <img src="/../{{putanja_slike}}" class="rounded sira" >
+                </div>
+        {% else %}
+                <div class="container">
+                        <img src="/../{{putanja_slike}}" class="rounded visa">
+                </div>
+        {% endif %}
+                            
+    {% endif %}
+    <h3> {{sadrzaj}}  </h3>
+    <p>{{datum}}</p>
+    <hr>
+    {% endif %}
+</div>
+{% endblock %}

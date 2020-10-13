@@ -1,0 +1,13 @@
+#prikaz{
+    text-align:center;
+}
+
+.sira{
+    height: 400px;
+    max-width: 100%;
+  }
+  
+  .visa{
+    height: 500px;
+    max-width: 100%;
+  }

@@ -1,0 +1,166 @@
+{% extends 'layout.twig' %}
+{% block title %} {{naslov_strane}} {% endblock %}
+
+{% block stil %} 
+<link rel="stylesheet" href="/src/Styles/administrator_objave.css" type="text/css">
+
+{% endblock %}
+
+{% block link %}
+
+<a href="/administrator_logout" class="nav-item nav-link">{{odjava}}</a>
+<a href="/pocetna_strana_administratora" class="nav-item nav-link">{{nazad}}</a>
+
+            
+{% endblock %}
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid" style="text-align:center;">
+    <h3>{{naslov_strane}}</h3>
+</div>
+<div class="container" id="glavni" style="text-align:center;">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>{{id}}</th>
+                <th>{{naslov}}</th>
+                <th>{{datum_odrzavanja}}</th>
+                <th>{{naziv_preduzeca}}</th>
+                <th>{{datum_postavljanja}}</th>
+                <th>{{akcija}}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in objave %}
+        <div>
+            <tr id="{{item['id']}}">
+                <td>{{item["id"]}}</td>
+                <td>{{item["naslov"]}}</td>
+                <td>{{item["datum"]}}</td>
+                <td>{{item["naziv"]}}</td>
+                <td>{{item["datum_postavljanja"]}}</td>
+                <td><div id="akcija-{{item['id']}}">
+                        <div class="btn btn-group">
+                            <button type="button" id="button-{{item['id']}}" class="btn btn-primary" onclick="izbrisi_objavu({{item['id']}});">
+                                {{obrisi}}
+                            </button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal-{{item['id']}}">
+                                {{prikaz}}
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="modal-{{item['id']}}">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">{{item['naslov']}}</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                       {{item['tekst']}}
+                                        {% if item['putanja_slike'] != "" %}
+                                            {{item['tekst']}}
+                                            {% if item['orijentacija'] == "s" %}
+                                                <div class="container">
+                                                    <img src="/../{{item['putanja_slike']}}" style="max-width:100%;" class="img-responsive" >
+                                                </div>
+                                            {% else %}
+                                                <div class="container">
+                                                    <img src="/../{{item['putanja_slike']}}" style="max-height:80%;max-width:90%;"class="img-responsive">
+                                                </div>
+                                            {% endif %}
+                                            
+                                        {% endif %}
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+        <div>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="container" id="prikaz_mali_uredjaji">
+    {% for item in objave %}
+        
+        <div class="container" id="{{item['id']}}-manji">
+            <hr>
+            <p><strong>{{id}} </strong>{{item["id"]}}</p>
+            <p><strong>{{naslov}} </strong>{{item["naslov"]}}</p>
+            <p><strong>{{datum_odrzavanja}} </strong>{{item["datum"]}}</p>
+            <p><strong>{{naziv_preduzeca}} </strong>{{item["naziv"]}}</p>
+            <p><strong>{{datum_postavljanja}} </strong>{{item["datum_postavljanja"]}}</p>
+            <p><strong>{{akcija}} </strong>{{item["email"]}}</p>
+            
+            <div class="btn btn-group">
+                <button type="button" id="button-{{item['id']}}" class="btn btn-primary" onclick="izbrisi_objavu({{item['id']}});">
+                        {{obrisi}}
+                </button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#modal-manji-{{item['id']}}">
+                        {{prikaz}}
+                </button>
+            </div>
+                <!-- The Modal -->
+                <div class="modal" id="modal-manji-{{item['id']}}">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">{{item['naslov']}}</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                {{item['tekst']}}
+
+                                        {% if item['putanja_slike'] != "" %}
+                                            {{item['tekst']}}
+                                            {% if item['orijentacija'] == "s" %}
+                                                <div class="container">
+                                                    <img src="/../{{item['putanja_slike']}}" style="max-width:100%;" class="img-responsive" >
+                                                </div>
+                                            {% else %}
+                                                <div class="container">
+                                                    <img src="/../{{item['putanja_slike']}}" style="max-height:80%;max-width:100%;"class="img-responsive">
+                                                </div>
+                                            {% endif %}
+                                            
+                                        {% endif %}
+                                   
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <hr>
+        </div>
+        
+    {% endfor %}
+</div>
+<script type="text/javascript">
+let greska = '{{greska}}';
+</script>
+<script src="/../src/javascript/administrator_prikaz_objava.js" type="text/javascript"></script>
+{% endblock %}

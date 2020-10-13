@@ -1,0 +1,73 @@
+{% extends 'layout.twig' %}
+{% block title %} {{naslov}} {% endblock %}
+
+{% block stil %} 
+<link rel="stylesheet" href="/src/Styles/administrator_fizickih_lica.css" type="text/css">
+{% endblock %}
+
+{% block link %}
+
+<a href="/administrator_logout" class="nav-item nav-link">{{odjava}}</a>
+<a href="/pocetna_strana_administratora" class="nav-item nav-link">{{nazad}}</a>
+
+            
+{% endblock %}
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid" style="text-align:center;">
+    <h3>{{naslov}}</h3>
+</div>
+<div class="container" id="glavni" style="text-align:center;">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>{{id}}</th>
+                <th>{{ime}}</th>
+                <th>{{prezime}}</th>
+                <th>{{korisnicko_ime}}</th>
+                <th>{{datum_rodjenja}}</th>
+                <th>{{email}}</th>
+                <th>{{obrisi}}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in fizicka_lica %}
+            <tr id="{{item['id']}}">
+                <td>{{item["id"]}}</td>
+                <td>{{item["ime"]}}</td>
+                <td>{{item["prezime"]}}</td>
+                <td>{{item["korisnicko_ime"]}}</td>
+                <td>{{item["dan_rodjenja"]}}-{{item["mesec_rodjenja"]}}-{{item["godina_rodjenja"]}}</td>
+                <td>{{item["email"]}}</td>
+                <td><div><button type="button" class="btn btn-primary" onclick="izbrisi_fizicko_lice({{item['id']}});">{{obrisi}}</button></div></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="container" id="prikaz_mali_uredjaji">
+    {% for item in fizicka_lica %}
+        
+        <div class="container" id="{{item['id']}}-manji">
+            <hr>
+            <p><strong>{{id}} </strong>{{item["id"]}}</p>
+            <p><strong>{{ime}} </strong>{{item["ime"]}}</p>
+            <p><strong>{{prezime}} </strong>{{item["prezime"]}}</p>
+            <p><strong>{{korisnicko_ime}} </strong>{{item["korisnicko_ime"]}}</p>
+            <p><strong>{{datum_rodjenja}} </strong>{{item["dan_rodjenja"]}}-{{item["mesec_rodjenja"]}}-{{item["godina_rodjenja"]}}</p>
+            <p><strong>{{email}} </strong>{{item["email"]}}</p>
+            <p><div><button type="button" class="btn btn-primary" onclick="izbrisi_fizicko_lice({{item['id']}});">{{obrisi}}</button></div></p>
+            <hr>
+        </div>
+        
+    {% endfor %}
+</div>
+<script type="text/javascript">
+let greska = '{{greska}}';
+</script>
+<script src="/../src/javascript/administrator_prikaz_fizickih_lica.js" type="text/javascript"></script>
+
+{% endblock %}

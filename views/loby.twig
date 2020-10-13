@@ -1,0 +1,139 @@
+{% extends 'layout.twig' %}
+
+{% block title %} {{naslovStrana}} {% endblock %}
+
+{% block stil %} <link rel="stylesheet" href="src/Styles/loby.css" type="text/css">
+                 
+{% endblock %}
+
+
+{% block link %}
+
+{% if ulogovan is defined %}
+            <a href="/odjava" class="nav-item nav-link">{{odjava}}</a>
+            <a href="/logovanje" class="nav-item nav-link">{{pocetna}}</a>
+
+
+{% else %}
+           {% if admin is defined %}
+                    <a href="/administrator_logout" class="nav-item nav-link">{{odjava}}</a>
+
+           {% else %}
+                    <a href="/vrstaRegistracije" class="nav-item nav-link">{{registruj_se}}</a>
+                    <a href="/vrstaLogovanja" class="nav-item nav-link">{{ulogujte_se}}</a>
+          {% endif %}
+{% endif %}
+            
+{% endblock %}
+{% block jezik %}
+     
+    <form class="form-inline" action="promeniJezik" method="post">
+       <div class="form-group" id="ovde">
+            <div class="custom-control custom-radio" id="levo_radio">
+                <input type="radio" class="custom-control-input" id="customRadio" 
+                 name="jezik" value="srp" {% if jezik == "srp"%}checked{% endif %}>
+                <label class="custom-control-label" for="customRadio">srpski</label>
+            </div>
+            <div class="custom-control custom-radio" id="desno_radio">
+                <input type="radio" class="custom-control-input" id="customRadio2" 
+                 name="jezik" value="eng" {% if jezik == "eng"%}checked{% endif %}>
+                <label class="custom-control-label" for="customRadio2">english</label>
+            </div>
+        </div>
+       <div class="form-group">      
+            <button type="submit" id="dugmeJezik" class="btn btn-outline-light"><p id="tekst_dugmeta_jezik">{{promeni}}</p></button>
+        </div>
+    </form>
+    
+
+{% endblock %}
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+{% block content %} 
+
+
+<div class="container-fluid" id="kontejnerPrvi">
+    <div class="row">
+
+      <div class="col">
+            <div class="container slika_info">
+                <i>
+                    <p id="tekst_info">
+                        <a href="/info" id="link" style="text-decoration:none">{{info}}</a>
+                        <br>{{sta}}<br>{{cilj}}<br>{{primer}}
+                    </p>
+                </i>
+            </div>
+        
+      </div>
+
+      <div class="col-7">
+             <div class="container slika">
+                <div class="container center naslov" >
+                    <h4 class=" visinaNaslova">
+                       {{naslov}}
+                    </h4>
+                </div>
+            </div>
+      </div>
+
+      <div class="col" id="kolona_citat">
+         <blockquote class="blockquote">
+            <p class="mb-0 citatPrim" id="citat2"><cite>{{citat}}</cite></p>
+            <footer class="blockquote-footer citatPrim"> <cite title="Source Title">{{autor}}</cite></footer>
+         </blockquote>
+      </div>
+       
+    </div>  
+    
+</div>
+
+<!-- sekcija za manje uređaje -->
+
+<div class="container slika" id="slikaResize">
+    <h5 class="visinaNaslova">
+       {{naslov}}
+     </h5>
+</div>
+
+
+<div class="container center" id="citat">
+    <hr>
+    <blockquote class="blockquote">
+            <p class="mb-0 citatPrim"><cite>{{citat}}</cite></p>
+            <footer class="blockquote-footer citatPrim"> <cite title="Source Title">{{autor}}</cite></footer>
+         </blockquote>
+    <hr>
+</div>
+
+
+<!-- sekcija za manje uređaje - END -->
+
+<div id="sadrzaj" class="container center">
+    <div class="container" id="ulogujte_se">
+            <h4 class="h4">{{uloguj}}</h4>
+            <uo id="tabela_stavki">
+                <li>{{stavka_1}}</li>
+                <li>{{stavka_2}}</li>
+            </ol>
+        
+    </div>
+    <hr>
+    <div class="container" id="informacije">
+        <i><h5 class="h5"><a class="link" style="text-decoration:none" href="/info">{{info}}</a> ({{sta}},{{cilj}},{{primer}})</h5></i>
+    </div>
+    
+    <div class="container" id="bottom">
+        {% if admin is defined %}
+             <a class="link" style="text-decoration:none" href="/pocetna_strana_administratora">{{admin_pocetna}}</a>
+        {% else %}
+             <a class="link" style="text-decoration:none" href="administrator_logovanje">{{logovanje_admin}}</a>
+        {% endif %}
+    </div>
+</div>
+
+
+{% endblock %}
+       
+       
+       

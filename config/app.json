@@ -1,0 +1,8 @@
+{
+  "db": {
+    "user": "root",
+    "password": "",
+    "dbname" : "drustvena_odgovornost"
+  },
+  "log": "/var/log/bookstore.log"
+}

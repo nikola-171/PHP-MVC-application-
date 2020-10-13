@@ -1,0 +1,19 @@
+#forma_registracija {
+    margin-top: 1%;
+    text-align: center;
+  }
+  
+  #forma_registracija a {
+    text-decoration: none;
+  }
+
+  #forma{
+    border:1px solid rgba(160, 133, 133, 0.692);
+    padding: 15px;
+    border-radius: 3%;
+  }
+  
+  #div_forme {
+    width: 350px;
+    display: none;
+  }

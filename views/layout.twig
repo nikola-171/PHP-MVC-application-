@@ -1,0 +1,56 @@
+<html lang="en">
+    <head>
+        <title>{% block title %} {% endblock %}</title>
+          {% block stil %} {% endblock %}
+        <meta charset="UTF-8'">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="/../src/Images/icon_3.png" type="image/x-icon">        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+       
+    </head>
+
+    <body>
+
+
+
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">Home</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        
+            <div class="navbar-nav">
+                {% block link %}
+                {% endblock %}
+            </div>
+            {% block jezik %}
+            {% endblock %}
+            
+            <form action="/pretrazivanje_aplikacije" method="get" class="form-inline ml-auto">
+                <div class="form-group">
+                    <input type="text" name="pretraga" size="11" class="form-control" placeholder="{% block placeholder %}{% endblock %}">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-outline-light">{% block pretraga %}{% endblock %}</button>
+
+                    </span>
+                </div>
+            </form>
+        </div>
+    </nav>
+</div>
+
+{% block content %} {% endblock %}
+    
+     
+    </body>
+</html>

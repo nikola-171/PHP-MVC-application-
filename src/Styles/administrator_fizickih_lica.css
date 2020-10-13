@@ -1,0 +1,14 @@
+
+#prikaz_mali_uredjaji{
+    text-align:center;
+    display:none;
+}
+@media screen and (max-width: 800px) {
+    #glavni{
+        display: none;
+    }
+    #prikaz_mali_uredjaji{
+        text-align:left;
+        display:block;
+    }
+}

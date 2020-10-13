@@ -1,0 +1,160 @@
+{% extends 'layout.twig' %}
+
+{% block title %} 
+    {{registruj_se}}
+{% endblock %}
+{% block stil %} <link rel="stylesheet" href="/src/Styles/register.css" type="text/css">
+                 
+{% endblock %}
+
+{% block link %}
+
+{% if ulogovan is defined %}
+            <a href="/odjava" class="nav-item nav-link">{{odjava}}</a>
+
+{% else %}
+
+            <a href="/vrstaRegistracije" class="nav-item nav-link">{{registruj_se}}</a>
+            <a href="/vrstaLogovanja" class="nav-item nav-link">{{ulogujte_se}}</a>
+{% endif %}
+
+{% endblock %}
+
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+
+{% block content %}
+    <div class="container" id="forma_registracija">
+        {% if uspeh is defined %}
+        <h3>{{uspeh}}</h3>
+    {% endif %}
+    </div>
+    
+
+ 
+    <div class="container" id="div_forme">
+        <form action="/registracija/provera" id="forma" method="post">
+            <div class="form-group">
+                <label>{{ime}}</label>
+                <input type="text" name="ime" v-model="ime" data-toggle="tooltip" data-placement="top" title="{{ime_unos}}" class="form-control" placeholder="{{ime_unos}}" oninvalid="this.setCustomValidity('{{obavezno}}')" 
+                       oninput="setCustomValidity('')" autocomplete="off" required/>
+            </div>
+            <div class="form-group">
+                <label>{{prezime}}</label>
+                <input type="text" name="prezime" v-model="prezime" data-toggle="tooltip" data-placement="top" title="{{prezime_unos}}" class="form-control" placeholder="{{prezime_unos}}" autocomplete="off" oninvalid="this.setCustomValidity('{{obavezno}}')" 
+                       oninput="setCustomValidity('')" required/>
+            </div>
+            <div class="form-group">
+                <label>{{korisnicko_ime}}</label>
+                <input type="text" name="korisnickoIme" v-model="korisnickoIme" data-toggle="tooltip" data-placement="top" title="{{korisnicko_ime_unos}}" class="form-control" placeholder="{{korisnicko_ime_unos}}" oninvalid="this.setCustomValidity('{{obavezno}}')" 
+                       oninput="setCustomValidity('')" autocomplete="off" required/>
+            </div>
+            <div class="form-group">
+                <label>{{lozinka}}</label>
+                <input type="password" name="lozinka" v-model="lozinka" data-toggle="tooltip" data-placement="top" title="{{lozinka_unos}}" class="form-control" placeholder="{{lozinka_unos}}" autocomplete="off" oninvalid="this.setCustomValidity('{{obavezno}}')" 
+                       oninput="setCustomValidity('')" required/>
+            </div>
+            <div class="form-group">
+                <label>{{email}}</label>
+                <input type="email" data-toggle="tooltip" data-placement="top" title="{{email_unos}}" class="form-control" placeholder="{{email_unos}}" autocomplete="off" 
+                       oninvalid="InvalidMsg(this);" 
+                       oninput="InvalidMsg(this);" name="email"
+                       required="required"/>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>{{dan}}</label>
+                        <select class="form-control" name="dan" data-toggle="tooltip" data-placement="top" title="">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                        <div class="form-group">
+                        <label>{{mesec}}</label>
+                        <select class="form-control" name="mesec" data-toggle="tooltip" data-placement="bottom" title="Unesite mesec rođenja">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>{{godina}}</label>
+                        <input type="number" name="godina" min="1925" max="2001" data-toggle="tooltip" data-placement="bottom" title="{{godina_unos}}" class="form-control" autocomplete="off" required/>
+                    </div>
+                </div>
+                <script>
+                 $(function () {
+                     $('[data-toggle="tooltip"]').tooltip()
+                });
+                </script>
+            </div>
+            
+            <button type="submit" class="btn btn-success">{{prosledi}}</button>
+        </form>
+    </div>
+    
+    <script type="text/javascript"> 
+    
+        function InvalidMsg(textbox) { 
+            if (textbox.value === '') { 
+                textbox.setCustomValidity 
+                      ('{{obavezno}}'); 
+            } else if (textbox.validity.typeMismatch) { 
+                textbox.setCustomValidity 
+                      ('{{obavezno}}'); 
+            } else { 
+                textbox.setCustomValidity(''); 
+            } 
+            return true; 
+        };
+
+        $(document).ready(function(){
+            $('#div_forme').show();
+        });
+         
+    </script>
+ {% endblock %}

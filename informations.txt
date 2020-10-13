@@ -1,0 +1,3 @@
+This application is my school project whitch represents the use of PHP MVC architecture.
+
+ 

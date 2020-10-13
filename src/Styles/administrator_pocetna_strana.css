@@ -1,0 +1,44 @@
+
+.sekcija{
+    background-color: #ccd9ff;
+    border-radius: 5vh;
+    padding: 4vh;
+    margin:4vh;
+}
+
+#kontejner{
+    text-align:center;
+    margin-top:6vh;
+    text-decoration: none;
+
+}
+
+#naslov_izvestaj{
+    text-align:center;
+}
+
+#kontejner_izvestaj{
+    text-align:center;
+    margin-top:7vh;
+}
+
+#naslov{
+    text-align:center;
+}
+
+#prikaz_mali_uredjaji{
+    display:none;
+    text-align:center;
+}
+
+@media screen and (max-width: 800px) {
+    #kontejner{
+        display: none;
+    }
+    #kontejner_izvestaj{
+        display:none;
+    }
+    #prikaz_mali_uredjaji{
+        display: block;
+    }
+}

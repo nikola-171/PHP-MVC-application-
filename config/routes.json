@@ -1,0 +1,197 @@
+{
+	"" : {
+		"controller" : "welcome",
+		"method" : "showAll"
+	},
+	"registracija" : {
+		"controller" : "register",
+		"method" : "showAll"
+	},
+	"registracijaPravno": {
+		"controller": "register",
+		"method": "showAllPravno"
+	},
+	"registracija/proveraPravno" :{
+		"controller" : "register",
+		"method": "checkPravno"
+	},
+	"logovanje" : {
+		"controller" : "login",
+		"method" : "showAll"
+	},
+	"logovanje/provera" : {
+		"controller" : "login",
+		"method" : "checkUsername"
+
+	},
+	"logovanje/proveraPravno": {
+		"controller": "login",
+		"method" :"checkPravno"
+	},
+	"vrstaRegistracije" : {
+		"controller" : "vrstaRegistracije",
+		"method" : "showAll"
+	},
+	"info" : {
+		"controller" : "info",
+		"method" : "showAll"
+	},
+	"vrstaLogovanja" : {
+		"controller" : "vrstaLogovanja",
+		"method" : "showAll"
+	},
+	"logovanje/pocetnaStrana/:id": {
+		"controller": "pocetnaStrana",
+		"method": "showAll",
+		"login" : true,
+		"params" : {
+			"id" : "number"
+		}
+	},
+	"izbrisiObjavu" :{
+		"controller" : "pocetnaStrana",
+		"method" : "izbrisiObjavu"
+	},
+	"postaviKomentar": {
+		"controller" : "pocetnaStrana",
+		"method" : "postaviKomentar"
+	},
+	"registracija/provera": {
+		"controller" : "register",
+		"method" : "check"
+	},
+	"odjava" :{
+		"controller" : "logout",
+		"method" : "logout"
+	},
+	"existing" : {
+		"controller" : "existing",
+		"method" : "check"
+	},
+	"logovanjePravno": {
+		"controller": "login",
+		"method" : "showAllPravno"
+	},
+	"promeniJezik": {
+		"controller" : "welcome",
+		"method" : "promeniJezik"
+	},
+	"ucitajObjave": {
+		"controller" : "pocetnaStrana",
+		"method": "ucitajObjave"
+	},
+	"zaboravljenaLozinka" : {
+		"controller" : "zaboravljenaLozinka",
+		"method" : "zaboravljena_lozinka_fizicko"
+	},
+	"zaboravljenaLozinkaPreduzece":{
+		"controller" : "zaboravljenaLozinka",
+		"method" : "zaboravljena_lozinka_preduzece"
+	},
+	"reset" : {
+		"controller" : "zaboravljenaLozinka",
+		"method" : "validacija"
+	},
+	"resetPreduzece" : {
+		"controller" : "zaboravljenaLozinka",
+		"method" : "validacijaPreduzece"
+
+
+	},
+	"promenaLozinkeFizicko" : {
+		"controller" : "zaboravljenaLozinka",
+		"method" : "promeni_lozinku"
+	},
+	"promenaLozinkePreduzece" :{
+		"controller" : "zaboravljenaLozinka",
+		"method" : "promeni_lozinku_preduzece"
+	},
+	"administrator_logovanje" : {
+		"controller" : "Administrator",
+		"method": "prikaz_logovanje"
+	},
+	"administrator_registracija" : {
+		"controller" : "Administrator",
+		"method" : "prikaz_registracija"
+	},
+	"administrator_provera_unikatnosti":{
+		"controller" : "Administrator",
+		"method" : "registracija_administratora"
+	},
+	"registracija_administratora" : {
+		"controller" : "Administrator",
+		"method" : "registracija_administratora"
+	},
+	"verifikacija_administratora" : {
+		"controller" : "Administrator",
+		"method" : "verifikacija_administratora"
+	},
+	"postavi_sesiju_administratora": {
+		"controller" : "Administrator",
+		"method" : "postavi_sessiju"
+	},
+	"pocetna_strana_administratora": {
+		"controller" : "Administrator",
+		"method" : "prikaz_pocetne_strane_administrator"
+	},
+	"administrator_logout": {
+		"controller" : "Administrator",
+		"method" : "administrator_logout"
+	},
+	"pretrazivanje_aplikacije": {
+		"controller" : "pretraga",
+		"method" : "prikaz_rezultata"
+	},
+	"administrator/prikaz_preduzeca" : {
+		"controller" : "Administrator",
+		"method" : "prikaz_preduzeca"
+	},
+	"administrator/prikaz_fizickih_lica" : {
+		"controller" : "Administrator",
+		"method" : "prikaz_fizickih_lica"
+	},
+	"administrator/prikaz_objava" : {
+		"controller" : "Administrator",
+		"method" : "prikaz_objava"
+	},
+	"administrator_izbrisi_objavu" : {
+		"controller" : "Administrator",
+		"method" : "izbrisi_objavu"
+	},
+	"administrator_izbrisi_fizicko_lice": {
+		"controller" : "Administrator",
+		"method" : "izbrisi_fizicko_lice"
+	},
+	"administrator_izbrisi_preduzece" : {
+		"controller" : "Administrator",
+		"method" : "izbrisi_preduzece"
+	},
+	"administrator/stampaj_sadrzaj_logera_info" : {
+		"controller" : "Administrator",
+		"method" : "stampaj_sadrzaj_logera_info"
+	},
+	"administrator/stampaj_sadrzaj_logera_warning" : {
+		"controller" : "Administrator",
+		"method" : "stampaj_sadrzaj_logera_warning"
+	},
+	"administrator/stampaj_sadrzaj_logera_error" : {
+		"controller" : "Administrator",
+		"method" : "stampaj_sadrzaj_logera_error"
+	},
+	"administrator/stampaj_fizicka_lica" : {
+		"controller" : "Administrator",
+		"method" : "stampaj_fizickih_lica"
+	},
+	"administrator/stampaj_preduzeca" : {
+		"controller" : "Administrator",
+		"method" : "stampaj_preduzeca"
+	},
+	"administrator/stampaj_objave" : {
+		"controller" : "Administrator",
+		"method" : "stampaj_objave"
+	},
+	"objava/prikaz" : {
+		"controller" : "pocetnaStrana",
+		"method" : "prikaz_objave"
+	}
+}

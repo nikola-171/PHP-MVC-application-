@@ -1,0 +1,74 @@
+{% extends 'layout.twig' %}
+
+{% block title %}
+    Login
+{% endblock %}
+{% block stil %} <link rel="stylesheet" href="/src/Styles/loginPravno.css" type="text/css">
+                 
+{% endblock %}
+
+
+{% block link %}
+
+<a href="/vrstaRegistracije" class="nav-item nav-link">{{registruj_se}}</a>
+<a href="/vrstaLogovanja" class="nav-item nav-link">{{ulogujte_se}}</a>
+
+
+{% endblock %}
+
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+
+{% block content %}
+
+<div class="container" id="logovanje_forma">
+    <h3>{{naslov_preduzece}}</h3>
+    {% if error is defined %}
+        <div class="container">
+            <div class="alert alert-danger">
+                <h3>{{error}}</h3>
+            </div>
+        </div>
+    {% endif %}
+    
+    <form action="/logovanje/proveraPravno" id="forma" onsubmit="return provera();" method="post">
+
+        <div class="container">
+           
+        </div>
+        <div class="form-group">
+            <label>{{korisnicko_ime_preduzece}}</label>
+            <input type="text" data-toggle="tooltip" data-placement="top" id="maticniBroj" name="maticniBroj" v-model="maticniBroj" title="{{korisnicko_ime_unos_preduzece}}"  class="form-control" placeholder="{{korisnicko_ime_unos_preduzece}}" autocomplete="off"
+                     oninvalid="this.setCustomValidity('{{obavezno}}')" 
+                     oninput="setCustomValidity('')"  required/>
+        </div>
+        <div class="form-group">
+            <label>{{lozinka_preduzece}}</label>
+            <input type="password" data-toggle="tooltip" data-placement="top" title="{{lozinka_uno_preduzeces}}" id="lozinka" name="lozinka" v-model="lozinka" class="form-control" placeholder="{{lozinka_unos_preduzece}}" autocomplete="off" 
+                   oninvalid="this.setCustomValidity('{{obavezno}}')" 
+                   oninput="setCustomValidity('')" required/>
+        </div>
+        <div class="form-group">
+            <p><a href="/zaboravljenaLozinkaPreduzece">{{zaboravili_preduzece}}</a><p>
+        </div>
+        <button type="submit" value="Submit" class="btn btn-success">{{prosledi}}</button>
+    </form>
+</div>
+
+<script type="text/javascript">
+
+    function provera(){
+        /*ovde ce ici provera validnosti unetih podataka*/
+        return true;
+    }
+
+    $(document).ready(function(){
+        $('#logovanje_forma').show();
+    });
+    
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+</script>
+{% endblock %}

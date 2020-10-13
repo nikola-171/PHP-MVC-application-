@@ -1,0 +1,23 @@
+#prikaz_mali_uredjaji{
+    text-align:center;
+    display:none;
+}
+
+.sira{
+    height: 65%;
+    max-width: 80%;
+  }
+  
+  .visa{
+    height: 80%;
+    max-width: 80%;
+  }
+@media screen and (max-width: 800px) {
+    #glavni{
+        display: none;
+    }
+    #prikaz_mali_uredjaji{
+        text-align:left;
+        display:block;
+    }
+}

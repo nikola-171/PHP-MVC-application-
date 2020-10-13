@@ -1,0 +1,273 @@
+{% extends 'layout.twig' %}
+
+{% block title %}
+    {{pocetna_strana}}
+{% endblock %}
+
+{% block stil %}
+    <link rel="stylesheet" type="text/css" href="/../src/Styles/pocetna_strana.css">
+{% endblock %}
+
+{% block link %}
+<a href="/odjava" class="nav-item nav-link">{{odjava}}</a>
+
+{% endblock %}
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+{% block content %}
+
+{% if auth == "company" %}
+    <div class="row m-0" id="prikaz_veliki_uredjaj">
+        <div class="col-3">
+            <div style="text-align:left;" id="pretraga">
+                <h5>{{filter_naslov_sekcije}}</h5>
+                <form action="" method="get" id="forma_sadrzaj">
+                    <div class="form-group">
+                        <label >{{filter_datum}}</label>
+                        <input type="date" name="datum" max="2020-12-31" 
+                               min="2000-01-01" class="form-control">
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="customRadio" name="datumParam" value="<=">
+                        <label class="custom-control-label" for="customRadio">{{filter_datum_pre}}</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="customRadio2" name="datumParam" value=">=">
+                        <label class="custom-control-label" for="customRadio2">{{filter_datum_posle}}</label>
+                    </div> 
+                    <div class="form-group">
+                        <label>{{filter_naziv}}</label>
+                        <input type="text" name="naziv" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>{{filter_naslov}}</label>
+                        <input type="text" name="naslov" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>{{filter_sadrzi}}</label>
+                        <input type="text" name="sadrzi" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">{{pretraga}}</button>
+                        <button type="button" id="reset" class="btn btn-success">Reset</button>
+                    </div>
+                </form>
+                
+            </div>
+            <button onclick="topFunction()" id="myBtn" class="btn btn-success" style="display:none; position:fixed; bottom:5;">
+                <img src="/../src/Images/gore.png"/ height="25" width="27">
+            </button>
+        </div>
+
+        <div class="col-6">
+            <div class="container" id="objava">
+               <form action="/postaviKomentar" onsubmit="return test()" enctype="multipart/form-data" method="post">
+                    <h3 class="h3">{{dogadjaj_naslov_sekcije}}</h3>
+                    <div class="form-group">
+                        <textarea class="form-control" id="naslov" name="naslov" rows="2" style="resize:none;" placeholder="{{dogadjaj_naslov}}"></textarea>
+                    </div>
+                     <div class="form-group">
+                        <textarea class="form-control" id="sadrzaj" name="sadrzaj" rows="7" style="resize:none;" placeholder="{{dogadjaj_tekst}}"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>{{dogadjaj_datum}}:</label>
+                        <input type="date" value='' id="datum" name="datum" class="form-control">
+                    </div>
+                   <div class="btn btn-group">
+                        <div class="form-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="image" id="image">
+                                <label class="custom-file-label" for="customFile">{{dogadjaj_slika}}</label>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="form-group">
+                        <button type="submit"  class="btn btn-success">{{postavi}}</button>
+                   </div>
+                </form>
+                <hr>
+
+            </div>
+            
+        </div>
+
+        <div class="col-3">
+            <div class="container" style="margin-top:5vh;">
+                <blockquote class="blockquote">
+                    <p class="mb-0"><cite>{{citat}}</cite></p>
+                    <footer class="blockquote-footer">{{citat_autor}}</footer>
+                </blockquote>            
+            </div>
+        </div>
+
+     </div>
+{% endif %}
+<!-- prikaz za male uređaje -->
+    {% if auth == "company" %}
+        <div class="container" id="prikaz_mali_uredjaji">
+    
+            <div class="container" id="pretraga_mini">
+                <h5>{{filter_naslov_sekcije}}</h5>
+                <form action="" method="get">
+                    <div class="form-group">
+                        <label >{{filter_datum}}</label>
+                        <input type="date" name="datum" max="2020-12-31" 
+                               min="2000-01-01" class="form-control">
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="customRadio" name="datumParam" value="<">
+                        <label class="custom-control-label" for="customRadio">{{filter_datum_pre}}</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="customRadio2" name="datumParam" value=">">
+                        <label class="custom-control-label" for="customRadio2">{{filter_datum_posle}}</label>
+                    </div> 
+                    <div class="form-group">
+                        <label>{{filter_naziv}}</label>
+                        <input type="text" name="naziv" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>{{filter_naslov}}</label>
+                        <input type="text" name="naslov" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>{{filter_sadrzi}}</label>
+                        <input type="text" name="sadrzi" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">{{pretraga}}</button>
+                        <button type="button" id="reset" class="btn btn-success">Reset</button>
+                    </div>
+                </form>
+         </div>
+
+         <div class="container" id="objava" style="text-align:center;">
+                <hr>
+               <form action="/postaviKomentar" onsubmit="return test()" enctype="multipart/form-data" method="post">
+                    <h3 class="h3">{{dogadjaj_naslov_sekcije}}</h3>
+                    <div class="form-group">
+                        <textarea class="form-control" id="naslov" name="naslov" rows="2" style="resize:none;" placeholder="{{dogadjaj_naslov}}"></textarea>
+                    </div>
+                     <div class="form-group">
+                        <textarea class="form-control" id="sadrzaj" name="sadrzaj" rows="7" style="resize:none;" placeholder="{{dogadjaj_tekst}}"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>{{dogadjaj_datum}}:</label>
+                        <input type="date" name="datum" class="form-control">
+                    </div>
+                   <div class="btn btn-group">
+                        <div class="form-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="image" id="image">
+                                <label class="custom-file-label" for="customFile">{{dogadjaj_slika}}</label>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="form-group">
+                        <button type="submit"  class="btn btn-success">{{postavi}}</button>
+                   </div>
+                </form>
+                <hr>
+
+            </div>
+            <div class="container" style="margin-top:5vh;">
+                <blockquote class="blockquote">
+                    <p class="mb-0"><cite>{{citat}}</cite></p>
+                    <footer class="blockquote-footer">{{citat_autor}}</footer>
+                </blockquote>             
+            </div>
+            
+        </div>
+
+
+{% endif %}
+
+     <div class="container" style="text-align:center;">
+
+             {% for item in sadrzaj %}
+                <div class="komentar">
+                    <hr>
+                    <h5>{{item.naziv}} - {{item.datum}}</h5>
+                    <h5>{{item.naslov}}</h5>
+                    {% if auth == 'company' %}
+                        {% if korisnik == item.preduzece %}
+                            <form action="/izbrisiObjavu" method="post">
+                                <div class="form-group">
+                                    <input type="hidden" name="id" value="{{item.id}}">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">{{objava_obrisi}}</button>
+                                </div>
+                            </form>
+                        {% endif %}
+                    {% endif %}
+                    
+                    <p>{{item.sadrzaj}}</p>
+                    {% if item.putanja_slike != null %}
+                        {% if item.orijentacija == "s" %}
+                            <div class="container">
+                                <img src="/../{{item.putanja_slike}}" class="rounded sira" >
+                            </div>
+                        {% else %}
+                            <div class="container">
+                                <img src="/../{{item.putanja_slike}}" class="rounded visa">
+                            </div>
+                        {% endif %}
+                        
+                    {% endif %}
+                    <h3> {{item.tekst}}  </h3>
+                    <a href="/objava/prikaz?id_objave={{item.id}}"><button type="button" class="btn btn-primary">{{prikaz}}</button></a>
+                    <hr>
+                </div>
+
+            
+            {% endfor %}
+            <div id="rez"></div>
+            <button type="button" class="btn btn-success" style="margin-bottom:4vh;" id="ucitavanje">{{ucitaj}}</button>
+            
+        </div>
+     
+
+
+   
+    <script type="text/javascript">
+        var nema = '{{nema}}';
+        var id_zadnjeg_komentara = {{id_zadnjeg}};
+        var korisnik = {{korisnik}};
+        var auth = "{{auth}}";
+        var datum = ""; 
+        var datumParam = "";
+        var naziv = "";
+        var naslov = "";
+        var sadrzi = "";
+        {% if datum != "" %}
+        datum = "{{datum}}";
+        {% endif %}
+        {% if datumParam != "" %}
+        datumParam = "{{datumParam}}";
+        {% endif %}
+        {% if naziv != "" %}
+        naziv = "{{naziv}}";
+        {% endif %}
+        {% if naslov != "" %}
+        naslov = "{{naslov}}";
+        {% endif %}
+        {% if sadrzi != "" %}
+        sadrzi = "{{sadrzi}}";
+        {% endif %}
+
+        if(datumParam == "&gt;"){
+            datumParam = '>';
+        }
+
+        if(datumParam == "&lt;"){
+            datumParam = '<';
+        }
+        let prazna = '{{prazna}}';
+    </script>
+    <script src="/../src/javascript/pocetna_strana.js" type="text/javascript"></script>
+    
+{% endblock %}
+

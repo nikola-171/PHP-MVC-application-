@@ -1,0 +1,55 @@
+#pretraga {
+  background-color: white;
+  text-align: center;
+  margin-top: 3vh;
+  margin-left: 3vh;
+  max-width:350px;
+}
+
+#pretraga_mini{
+  text-align: center;
+
+}
+
+.komentar {
+  background-color: white;
+}
+
+#objava {
+  
+  margin-top: 3vh;
+}
+
+.sira{
+  height: 300px;
+  max-width: 100%;
+}
+
+.visa{
+  height: 400px;
+  max-width: 100%;
+}
+
+#informacije {
+  background-color: white;
+  text-align: left;
+  margin-top: 3vh;
+  margin-right: 3vh;
+}
+
+#prikaz_mali_uredjaji {
+  display: none;
+}
+
+
+@media screen and (max-width: 870px) {
+  #prikaz_veliki_uredjaj {
+    display: none;
+  }
+
+  #prikaz_mali_uredjaji {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=pocetna_strana.css.map */

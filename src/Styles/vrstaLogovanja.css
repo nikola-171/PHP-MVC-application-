@@ -1,0 +1,61 @@
+#sadrzaj {
+  margin-top: 2%;
+  text-align: center;
+}
+#sadrzaj a {
+  text-decoration: none;
+}
+
+#naslovFizicko {
+  margin-top: 275px;
+}
+
+#naslovPravno {
+  margin-top: 270px;
+}
+
+.fizicko {
+  background-image: url("../Images/got ind.jpg");
+  background-size: 100% 100%;
+  height: 450px;
+}
+
+.pravno {
+  background-image: url("../Images/got pr.L..jpg");
+  background-size: 100% 100%;
+  height: 450px;
+}
+
+#donjaSekcija {
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+#resize {
+  display: none;
+  margin-top: 2%;
+  text-align: center;
+}
+#resize a {
+  text-decoration: none;
+}
+
+#naslovPravnoResize {
+  padding-top: 267px;
+}
+
+#naslovfizickoResize {
+  padding-top: 270px;
+}
+
+@media screen and (max-width: 710px) {
+  #sadrzaj {
+    display: none;
+  }
+
+  #resize {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=vrstaLogovanja.css.map */

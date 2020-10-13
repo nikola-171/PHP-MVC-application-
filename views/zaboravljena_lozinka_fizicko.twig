@@ -1,0 +1,35 @@
+{% extends 'layout.twig' %}
+{% block title %}
+    Login
+{% endblock %}
+{% block link %}
+
+
+<a href="/vrstaRegistracije" class="nav-item nav-link">{{registruj_se}}</a>
+<a href="/vrstaLogovanja" class="nav-item nav-link">{{ulogujte_se}}</a>
+
+
+{% endblock %}
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+
+{% block content %}
+<div class="container" style="text-align:center;  margin-top:15vh;">
+    <div class="jumbotron">
+        <h4>{{resetovanje}}:</h4>
+        <p>{{korisnicko_ime}}<p>
+        <div class="container" style="max-width:350px;">
+            <form action="/reset" id="forma" method="post">
+                <div class="form-group">
+                    <input type="text" id="korisnicko_ime" autocomplete="off" name="korisnicko_ime" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="button" id="prosledi" class="btn btn-primary">{{posalji}}</button>
+                </div>
+            </form>
+        </div>
+        <p id="load"></p>
+    </div>
+</div>
+<script src="/../src/javascript/zaboravljena_lozinka.js" type="text/javascript"></script>
+{% endblock %}

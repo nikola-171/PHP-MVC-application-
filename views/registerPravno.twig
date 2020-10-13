@@ -1,0 +1,90 @@
+{% extends 'layout.twig' %}
+
+{% block title %} 
+    {{registruj_se}}
+{% endblock %}
+{% block stil %} <link rel="stylesheet" href="/src/Styles/registerPravno.css" type="text/css">
+                 
+{% endblock %}
+
+{% block link %}
+
+
+
+<a href="/vrstaRegistracije" class="nav-item nav-link">{{registruj_se}}</a>
+<a href="/vrstaLogovanja" class="nav-item nav-link">{{ulogujte_se}}</a>
+
+
+{% endblock %}
+
+{% block placeholder %}{{placeholder}}{% endblock %}
+{% block pretraga %}{{pretraga}}{% endblock %}
+
+{% block content %}
+    <div class="container" id="forma_registracija">
+        <!--<h3> {{naslov}}</h3>-->
+        {% if uspeh is defined %}
+        <h3>{{uspeh}}</h3>
+    {% endif %}
+    </div>
+    
+
+ 
+    <div class="container" id="div_forme">
+        <form action="/registracija/proveraPravno" id="forma" method="post">
+            <div class="form-group">
+                <label>{{naziv}}</label>
+                <input type="text" name="naziv" v-model="naziv" data-toggle="tooltip" data-placement="top" title="{{naziv_unos}}" class="form-control" placeholder="{{naziv_unos}}" oninvalid="this.setCustomValidity('{{obavezno}}')" 
+                       oninput="setCustomValidity('')" autocomplete="off" required/>
+            </div>
+            <div class="form-group">
+                <label>{{maticni}}</label>
+                <input type="text" name="maticniBroj" v-model="maticniBroj" data-toggle="tooltip" data-placement="top" title="{{maticni_unos}}" class="form-control" placeholder="{{maticni_unos}}" oninvalid="this.setCustomValidity('{{obavezno}}')" 
+                       oninput="setCustomValidity('')" autocomplete="off" required/>
+            </div>
+            <div class="form-group">
+                <label>{{lozinka}}</label>
+                <input type="password" name="lozinka" v-model="lozinka" data-toggle="tooltip" data-placement="top" title="{{lozinka_unos}}" class="form-control" placeholder="{{lozinka_unos}}" autocomplete="off" oninvalid="this.setCustomValidity('{{obavezno}}')" 
+                       oninput="setCustomValidity('')" required/>
+            </div>
+            <div class="form-group">
+                <label>{{sifra_drustva}}</label>
+                <input type="text" name="sifraDrustva" v-model="sifraDrustva" data-toggle="tooltip" data-placement="top" title="{{sifra_drustva}}" class="form-control" placeholder="{{sifra_drustva_unos}}" oninvalid="this.setCustomValidity('{{obavezno}}')" 
+                       oninput="setCustomValidity('')" autocomplete="off" required/>
+            </div>
+           <div class="form-group">
+                <label>{{email}}</label>
+                <input type="email" data-toggle="tooltip" data-placement="top" title="{{email_unos}}" class="form-control" placeholder="{{email_unos}}" autocomplete="off" 
+                       oninvalid="InvalidMsg(this);" 
+                       oninput="InvalidMsg(this);" name="email"
+                       required="required"/>
+            </div>
+            
+    
+            <button type="submit" class="btn btn-success">{{prosledi}}</button>
+        </form>
+    </div>
+    
+    <script type="text/javascript"> 
+    
+        
+        function InvalidMsg(textbox) { 
+            if (textbox.value === '') { 
+                textbox.setCustomValidity 
+                      ('{{obavezno}}'); 
+            } else if (textbox.validity.typeMismatch) { 
+                textbox.setCustomValidity 
+                      ('{{obavezno}}'); 
+            } else { 
+                textbox.setCustomValidity(''); 
+            } 
+            return true; 
+        } ;
+
+        $(document).ready(function(){
+            $('#div_forme').show();
+        });
+         
+
+    </script>
+ {% endblock %}
